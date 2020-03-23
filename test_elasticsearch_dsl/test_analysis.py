@@ -1,5 +1,5 @@
 # coding: utf-8
-from elasticsearch_dsl import analysis
+from elasticsearch2_dsl import analysis
 
 from pytest import raises
 

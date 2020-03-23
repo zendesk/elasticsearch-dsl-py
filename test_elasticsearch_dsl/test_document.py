@@ -4,8 +4,8 @@ from hashlib import md5
 from datetime import datetime
 import ipaddress
 
-from elasticsearch_dsl import document, field, Mapping, utils, InnerDoc, analyzer, Index, Range
-from elasticsearch_dsl.exceptions import ValidationException, IllegalOperation
+from elasticsearch2_dsl import document, field, Mapping, utils, InnerDoc, analyzer, Index, Range
+from elasticsearch2_dsl.exceptions import ValidationException, IllegalOperation
 
 from pytest import raises
 

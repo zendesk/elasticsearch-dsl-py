@@ -9,8 +9,8 @@ To custom analyzer with ascii folding allow search to work in different language
 """
 from __future__ import print_function, unicode_literals
 
-from elasticsearch_dsl import connections, Document, analyzer, token_filter, SearchAsYouType
-from elasticsearch_dsl.query import MultiMatch
+from elasticsearch2_dsl import connections, Document, analyzer, token_filter, SearchAsYouType
+from elasticsearch2_dsl.query import MultiMatch
 
 # custom analyzer for names
 ascii_fold = analyzer(

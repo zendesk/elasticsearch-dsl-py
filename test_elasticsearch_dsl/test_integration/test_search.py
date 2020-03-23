@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 from elasticsearch import TransportError
 
-from elasticsearch_dsl import Search, Document, Date, Text, Keyword, MultiSearch, \
+from elasticsearch2_dsl import Search, Document, Date, Text, Keyword, MultiSearch, \
     Index, Q
-from elasticsearch_dsl.response import aggs
+from elasticsearch2_dsl.response import aggs
 
 from .test_data import FLAT_DATA
 

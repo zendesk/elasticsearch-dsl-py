@@ -21,7 +21,7 @@ Key concepts:
 from datetime import datetime
 from fnmatch import fnmatch
 
-from elasticsearch_dsl import Document, Date, Text, Keyword, connections
+from elasticsearch2_dsl import Document, Date, Text, Keyword, connections
 
 ALIAS = 'test-blog'
 PATTERN = ALIAS + '-*'

@@ -13,7 +13,7 @@ from __future__ import print_function, unicode_literals
 
 from itertools import permutations
 
-from elasticsearch_dsl import connections, Document, Completion, Text, Long, \
+from elasticsearch2_dsl import connections, Document, Completion, Text, Long, \
         Keyword, analyzer, token_filter
 
 # custom analyzer for names

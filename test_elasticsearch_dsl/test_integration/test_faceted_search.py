@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from elasticsearch_dsl import Document, Boolean, Date, A, Keyword
-from elasticsearch_dsl.faceted_search import FacetedSearch, TermsFacet, \
+from elasticsearch2_dsl import Document, Boolean, Date, A, Keyword
+from elasticsearch2_dsl.faceted_search import FacetedSearch, TermsFacet, \
     DateHistogramFacet, RangeFacet, NestedFacet
 
 from .test_document import PullRequest
@@ -116,16 +116,16 @@ def test_empty_search_finds_everything(data_client):
 
     assert r.hits.total.value == 52
     assert [
-        ('elasticsearch_dsl', 40, False),
+        ('elasticsearch2_dsl', 40, False),
         ('test_elasticsearch_dsl', 35, False),
-        ('elasticsearch_dsl/query.py', 19, False),
+        ('elasticsearch2_dsl/query.py', 19, False),
         ('test_elasticsearch_dsl/test_search.py', 15, False),
-        ('elasticsearch_dsl/utils.py', 14, False),
+        ('elasticsearch2_dsl/utils.py', 14, False),
         ('test_elasticsearch_dsl/test_query.py', 13, False),
-        ('elasticsearch_dsl/search.py', 12, False),
-        ('elasticsearch_dsl/aggs.py', 11, False),
+        ('elasticsearch2_dsl/search.py', 12, False),
+        ('elasticsearch2_dsl/aggs.py', 11, False),
         ('test_elasticsearch_dsl/test_result.py', 5, False),
-        ('elasticsearch_dsl/result.py', 3, False)
+        ('elasticsearch2_dsl/result.py', 3, False)
     ] == r.facets.files
 
     assert [
@@ -161,16 +161,16 @@ def test_term_filters_are_shown_as_selected_and_data_is_filtered(data_client):
 
     assert 35 == r.hits.total.value
     assert [
-        ('elasticsearch_dsl', 40, False),
+        ('elasticsearch2_dsl', 40, False),
         ('test_elasticsearch_dsl', 35, True), # selected
-        ('elasticsearch_dsl/query.py', 19, False),
+        ('elasticsearch2_dsl/query.py', 19, False),
         ('test_elasticsearch_dsl/test_search.py', 15, False),
-        ('elasticsearch_dsl/utils.py', 14, False),
+        ('elasticsearch2_dsl/utils.py', 14, False),
         ('test_elasticsearch_dsl/test_query.py', 13, False),
-        ('elasticsearch_dsl/search.py', 12, False),
-        ('elasticsearch_dsl/aggs.py', 11, False),
+        ('elasticsearch2_dsl/search.py', 12, False),
+        ('elasticsearch2_dsl/aggs.py', 11, False),
         ('test_elasticsearch_dsl/test_result.py', 5, False),
-        ('elasticsearch_dsl/result.py', 3, False)
+        ('elasticsearch2_dsl/result.py', 3, False)
     ] == r.facets.files
 
     assert [

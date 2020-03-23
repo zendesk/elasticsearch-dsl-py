@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pytest import fixture
 
-from elasticsearch_dsl import Q
+from elasticsearch2_dsl import Q
 
 from .parent_child import User, Question, Answer, setup, Comment
 

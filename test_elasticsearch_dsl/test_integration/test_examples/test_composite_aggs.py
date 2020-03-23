@@ -1,4 +1,4 @@
-from elasticsearch_dsl import Search, A
+from elasticsearch2_dsl import Search, A
 
 from .composite_agg import scan_aggs
 

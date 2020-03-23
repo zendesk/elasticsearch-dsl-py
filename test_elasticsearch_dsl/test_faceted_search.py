@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from elasticsearch_dsl.faceted_search import (FacetedSearch, TermsFacet,
-                                              DateHistogramFacet)
+from elasticsearch2_dsl.faceted_search import (FacetedSearch, TermsFacet,
+                                               DateHistogramFacet)
 
 
 class BlogSearch(FacetedSearch):

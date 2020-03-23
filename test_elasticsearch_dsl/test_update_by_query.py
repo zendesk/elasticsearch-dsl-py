@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from elasticsearch_dsl import UpdateByQuery, query, Q, Document
+from elasticsearch2_dsl import UpdateByQuery, query, Q, Document
 
 def test_ubq_starts_with_no_query():
     ubq = UpdateByQuery()

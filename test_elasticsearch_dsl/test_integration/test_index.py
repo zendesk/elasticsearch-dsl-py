@@ -1,4 +1,4 @@
-from elasticsearch_dsl import Document, Index, Text, Keyword, Date, analysis, IndexTemplate
+from elasticsearch2_dsl import Document, Index, Text, Keyword, Date, analysis, IndexTemplate
 
 class Post(Document):
     title = Text(analyzer=analysis.analyzer('my_analyzer', tokenizer='keyword'))

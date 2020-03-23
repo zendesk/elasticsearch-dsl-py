@@ -24,7 +24,7 @@ It is used to showcase several key features of elasticsearch-dsl:
 """
 from datetime import datetime
 
-from elasticsearch_dsl import Document, Date, Text, Keyword, Boolean, InnerDoc, \
+from elasticsearch2_dsl import Document, Date, Text, Keyword, Boolean, InnerDoc, \
     Nested, Object, Join, Long, connections
 
 class User(InnerDoc):

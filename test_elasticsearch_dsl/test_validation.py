@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from elasticsearch_dsl import Document, Nested, Text, Date, Object, Boolean, Integer, InnerDoc
-from elasticsearch_dsl.exceptions import ValidationException
+from elasticsearch2_dsl import Document, Nested, Text, Date, Object, Boolean, Integer, InnerDoc
+from elasticsearch2_dsl.exceptions import ValidationException
 
 from pytest import raises
 

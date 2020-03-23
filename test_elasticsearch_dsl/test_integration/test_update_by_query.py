@@ -1,5 +1,5 @@
-from elasticsearch_dsl.update_by_query import UpdateByQuery
-from elasticsearch_dsl.search import Q
+from elasticsearch2_dsl.update_by_query import UpdateByQuery
+from elasticsearch2_dsl.search import Q
 from elasticsearch.helpers import bulk
 
 def test_update_by_query_no_script(write_client, setup_ubq_tests):

@@ -8,7 +8,7 @@ from elasticsearch.helpers.test import SkipTest, get_test_client
 from mock import Mock
 from pytest import fixture, skip
 
-from elasticsearch_dsl.connections import connections, add_connection
+from elasticsearch2_dsl.connections import connections, add_connection
 from .test_integration.test_data import DATA, FLAT_DATA, TEST_GIT_DATA, \
     create_git_index, create_flat_git_index
 from .test_integration.test_document import PullRequest, Comment, User, History
@@ -120,7 +120,7 @@ def dummy_response():
 
 @fixture
 def aggs_search():
-    from elasticsearch_dsl import Search
+    from elasticsearch2_dsl import Search
     s = Search(index='flat-git')
     s.aggs\
         .bucket('popular_files', 'terms', field='files', size=2)\
@@ -149,7 +149,7 @@ def aggs_data():
             'popular_files': {
                 'buckets': [
                     {
-                        'key': 'elasticsearch_dsl',
+                        'key': 'elasticsearch2_dsl',
                         'line_stats': {'count': 40, 'max': 228.0, 'min': 2.0, 'sum': 2151.0, 'avg': 53.775},
                         'doc_count': 40,
                         'top_commits': {

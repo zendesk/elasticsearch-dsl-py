@@ -254,7 +254,7 @@ class Request(object):
         will be returned with current instance remaining unchanged.
 
         :arg client: an instance of ``elasticsearch.Elasticsearch`` to use or
-            an alias to look up in ``elasticsearch_dsl.connections``
+            an alias to look up in ``elasticsearch2_dsl.connections``
 
         """
         s = self._clone()
@@ -738,7 +738,7 @@ class Search(Request):
 
 class MultiSearch(Request):
     """
-    Combine multiple :class:`~elasticsearch_dsl.Search` objects into a single
+    Combine multiple :class:`~elasticsearch2_dsl.Search` objects into a single
     request.
     """
     def __init__(self, **kwargs):
@@ -758,7 +758,7 @@ class MultiSearch(Request):
 
     def add(self, search):
         """
-        Adds a new :class:`~elasticsearch_dsl.Search` object to the request::
+        Adds a new :class:`~elasticsearch2_dsl.Search` object to the request::
 
             ms = MultiSearch(index='my-index')
             ms = ms.add(Search(doc_type=Category).filter('term', category='python'))

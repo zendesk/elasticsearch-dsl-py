@@ -117,7 +117,7 @@ class Index(object):
     def mapping(self, mapping):
         """
         Associate a mapping (an instance of
-        :class:`~elasticsearch_dsl.Mapping`) with this index.
+        :class:`~elasticsearch2_dsl.Mapping`) with this index.
         This means that, when this index is created, it will contain the
         mappings for the document type defined by those mappings.
         """
@@ -125,7 +125,7 @@ class Index(object):
 
     def document(self, document):
         """
-        Associate a :class:`~elasticsearch_dsl.Document` subclass with an index.
+        Associate a :class:`~elasticsearch2_dsl.Document` subclass with an index.
         This means that, when this index is created, it will contain the
         mappings for the ``Document``. If the ``Document`` class doesn't have a
         default index yet (by defining ``class Index``), this instance will be
@@ -184,7 +184,7 @@ class Index(object):
 
         Example::
 
-            from elasticsearch_dsl import analyzer, tokenizer
+            from elasticsearch2_dsl import analyzer, tokenizer
 
             my_analyzer = analyzer('my_analyzer',
                 tokenizer=tokenizer('trigram', 'nGram', min_gram=3, max_gram=3),
@@ -225,7 +225,7 @@ class Index(object):
 
     def search(self, using=None):
         """
-        Return a :class:`~elasticsearch_dsl.Search` object searching over the
+        Return a :class:`~elasticsearch2_dsl.Search` object searching over the
         index (or all the indices belonging to this template) and its
         ``Document``\\s.
         """
@@ -237,7 +237,7 @@ class Index(object):
 
     def updateByQuery(self, using=None):
         """
-        Return a :class:`~elasticsearch_dsl.UpdateByQuery` object searching over the index
+        Return a :class:`~elasticsearch2_dsl.UpdateByQuery` object searching over the index
         (or all the indices belonging to this template) and updating Documents that match
         the search criteria.
 

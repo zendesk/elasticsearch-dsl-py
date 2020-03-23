@@ -1,4 +1,4 @@
-from elasticsearch_dsl import analyzer, tokenizer, token_filter
+from elasticsearch2_dsl import analyzer, tokenizer, token_filter
 
 def test_simulate_with_just__builtin_tokenizer(client):
     a = analyzer('my-analyzer', tokenizer='keyword')

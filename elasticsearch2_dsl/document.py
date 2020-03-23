@@ -158,7 +158,7 @@ class Document(ObjectBase):
     @classmethod
     def search(cls, using=None, index=None):
         """
-        Create an :class:`~elasticsearch_dsl.Search` instance that will search
+        Create an :class:`~elasticsearch2_dsl.Search` instance that will search
         over this ``Document``.
         """
         return Search(
